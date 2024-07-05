@@ -15,6 +15,18 @@ function getComputerChoice(){
     }
 }
 function getHumanChoice(){
-    userChoice = prompt('Choose rock, paper or scissors!');
+    return userChoice = prompt('Choose rock, paper or scissors!');
+    /*
+    if(userChoice.toLowerCase()==='rock'){
+        return 'rock';
+    }
+    if(userChoice.toLowerCase()==='paper'){
+        return 'paper';
+    }
+    if(userChoice.toLowerCase()==='scissors'){
+        return 'scissors';
+    }
+    */
 }
 getComputerChoice()
+console.log(getHumanChoice())
