@@ -1,12 +1,10 @@
 
-//console.log('Helloooo peoplesss!!');
 
 let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice(){
     randomChoice = Math.floor((Math.random()*3));
-    //console.log(randomChoice);
     if(randomChoice === 0){
         return 'rock';
     }else if(randomChoice === 1){
@@ -19,17 +17,7 @@ function getComputerChoice(){
 }
 function getHumanChoice(){
     return userChoice = prompt('Choose rock, paper or scissors!');
-    /*
-    if(userChoice.toLowerCase()==='rock'){
-        return 'rock';
-    }
-    if(userChoice.toLowerCase()==='paper'){
-        return 'paper';
-    }
-    if(userChoice.toLowerCase()==='scissors'){
-        return 'scissors';
-    }
-    */
+    
 }
 
 function playRound(humanChoice, computerChoice){
@@ -90,13 +78,6 @@ function playGame(){
 }
 
 
-//------------ PLAY GAME -----------------
-
-//const computer = getComputerChoice();
-//console.log(`computer: ${computer}`);
-//const human = getHumanChoice();
-//console.log(`human: ${human}`);
-//playRound(human, computer);
 playGame();
 
 
