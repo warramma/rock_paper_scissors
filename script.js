@@ -15,10 +15,6 @@ function getComputerChoice(){
         return parseInt(randomChoice) + ' is an invalid choice';
     }
 }
-function getHumanChoice(){
-    return userChoice = prompt('Choose rock, paper or scissors!');
-    
-}
 
 function playRound(humanChoice, computerChoice){
     //human wins: rock beats scissors
@@ -57,27 +53,21 @@ function playRound(humanChoice, computerChoice){
     }
 
 }
-function playGame(){
-    //play 5 rounds 
-    for(let i = 0; i < 5; i++){
-        const computer = getComputerChoice();
-        console.log(`computer: ${computer}`);
-        const human = getHumanChoice();
-        console.log(`human: ${human}`);
-        playRound(human, computer);
-    }
-    console.log('Results>>>\nComputer Score = '+ computerScore + '\nHuman Score = ' + humanScore);
 
-    if(humanScore > computerScore){
-        console.log('You\'ve won!! o((>ω< ))o (☆▽☆)');
-    }else if(computerScore > humanScore){
-        console.log('You lost lol try again ＼（〇_ｏ）／');
-    }else{
-        console.log('It\'s a tie! (⌐■_■)');
-    }
-}
+/*----------DOM--------*/
+const rock = document.querySelector('#rock');
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 
-
-playGame();
-
-
+rock.addEventListener("click", ()=>{
+    playRound("rock", getComputerChoice())
+    event.stopPropagation();
+});
+paper.addEventListener("click", ()=>{
+    playRound("paper", getComputerChoice())
+    event.stopPropagation();
+});
+scissors.addEventListener("click",()=>{
+    playRound("scissors", getComputerChoice())
+    event.stopPropagation();
+});
