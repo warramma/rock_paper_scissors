@@ -139,6 +139,22 @@ function final(rounds){
             winner.textContent = 'It\'s a draw!';
             result.appendChild(winner);
         }
-        
+        const resetButton = document.createElement('button');
+        resetButton.textContent = 'RESET';
+        result.appendChild(resetButton);
+        resetButton.addEventListener("click", ()=>{
+            //alert("working!");
+            result.removeChild(result.firstChild);
+            
+            result.removeChild(result.firstChild);
+            
+            result.removeChild(result.firstChild);
+            result.removeChild(result.firstChild);
+            humanScore = 0;
+            updateHuman(humanScore);
+            computerScore = 0;
+            updateComputer(computerScore);
+        });
     }
+    
 }
