@@ -144,12 +144,9 @@ function final(rounds){
         result.appendChild(resetButton);
         resetButton.addEventListener("click", ()=>{
             //alert("working!");
-            result.removeChild(result.firstChild);
-            
-            result.removeChild(result.firstChild);
-            
-            result.removeChild(result.firstChild);
-            result.removeChild(result.firstChild);
+            while(result.contains(result.firstChild)){
+                result.removeChild(result.firstChild);
+            }
             humanScore = 0;
             updateHuman(humanScore);
             computerScore = 0;
